@@ -216,7 +216,6 @@
     <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()"><button class="lightbox-close" onclick="closeLightbox()">&times;</button><img id="lightbox-img" src="" alt="Screenshot"></div>
     <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
 
-    <!-- NAV -->
     <nav class="navbar" id="navbar">
         <a href="#" class="nav-logo"><div class="nav-logo-icon">🎮</div><span class="nav-logo-text">GESTURE HERO</span></a>
         <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></button>
@@ -232,7 +231,6 @@
         </ul>
     </nav>
 
-    <!-- HERO -->
     <section class="hero" id="hero">
         <div class="hero-grid"></div>
         <div class="hero-content">
@@ -253,7 +251,6 @@
         <div class="hero-scroll-indicator"><span class="fr">Défiler</span><span class="en">Scroll</span><i class="fas fa-chevron-down"></i></div>
     </section>
 
-    <!-- ABOUT -->
     <section class="section" id="about">
         <div class="section-container">
             <div class="section-header reveal"><div class="section-label"><span class="fr">La Mission</span><span class="en">The Mission</span></div><h2 class="section-title"><span class="fr">Arena Racing : <span class="highlight">Contrôle Gestuel</span></span><span class="en">Arena Racing: <span class="highlight">Gesture Control</span></span></h2><p class="section-desc"><span class="fr">Créer un contrôleur gestuel intelligent capable de jouer à Beach Buggy Racing uniquement avec des mouvements de la main.</span><span class="en">Build an intelligent gesture controller capable of playing Beach Buggy Racing using only hand movements.</span></p></div>
@@ -277,7 +274,6 @@
         </div>
     </section><div class="section-sep"></div>
 
-    <!-- ARCHITECTURE -->
     <section class="section" id="architecture">
         <div class="section-container">
             <div class="section-header reveal"><div class="section-label"><span class="fr">Architecture</span><span class="en">Architecture</span></div><h2 class="section-title"><span class="fr">Flux de Données <span class="highlight">Temps Réel</span></span><span class="en">Real-Time <span class="highlight">Data Flow</span></span></h2></div>
@@ -298,7 +294,6 @@
         </div>
     </section><div class="section-sep"></div>
 
-    <!-- EDGE IMPULSE -->
     <section class="section" id="edge-impulse">
         <div class="section-container">
             <div class="section-header reveal"><div class="section-label">Edge Impulse</div><h2 class="section-title"><span class="fr">Entraînement du <span class="highlight">Modèle IA</span></span><span class="en">AI Model <span class="highlight">Training</span></span></h2><p class="section-desc"><span class="fr">De la collecte de données au modèle TinyML déployé — le pipeline via Edge Impulse Studio.</span><span class="en">From data collection to deployed TinyML model — the pipeline via Edge Impulse Studio.</span></p></div>
@@ -310,23 +305,22 @@
                 <div class="ei-step"><div class="ei-step-num">STEP 05</div><div class="ei-step-icon">📦</div><h4><span class="fr">Déploiement</span><span class="en">Deployment</span></h4><p><span class="fr">Export librairie Arduino, latence 9ms.</span><span class="en">Arduino library export, 9ms latency.</span></p></div>
             </div>
 
-            <!-- SCREENSHOTS -->
             <div class="screenshot-gallery reveal">
                 <h3><span class="fr">📸 Captures d'Écran — Processus Edge Impulse</span><span class="en">📸 Screenshots — Edge Impulse Process</span></h3>
                 <div class="screenshots-grid">
-                    <div class="screenshot-card" onclick="openLightbox(this)"><span class="screenshot-step-tag">STEP 02</span><div class="screenshot-img-wrapper"><img src="screenshot/Cap2.jpeg" alt="Data Collection"></div><div class="screenshot-caption"><h5><span class="fr">📊 Collecte de Données</span><span class="en">📊 Data Collection</span></h5><p><span class="fr">150 échantillons train + 33 test — 6min 8s de données IMU pour 5 classes (forward, backward, left, right, idle). Split 82%/18%.</span><span class="en">150 train + 33 test samples — 6min 8s IMU data for 5 classes (forward, backward, left, right, idle). Split 82%/18%.</span></p></div></div>
+                    <div class="screenshot-card" onclick="openLightbox(this)"><span class="screenshot-step-tag">STEP 02</span><div class="screenshot-img-wrapper"><img src="Cap2.jpeg" alt="Data Collection"></div><div class="screenshot-caption"><h5><span class="fr">📊 Collecte de Données</span><span class="en">📊 Data Collection</span></h5><p><span class="fr">150 échantillons train + 33 test — 6min 8s de données IMU pour 5 classes (forward, backward, left, right, idle). Split 82%/18%.</span><span class="en">150 train + 33 test samples — 6min 8s IMU data for 5 classes (forward, backward, left, right, idle). Split 82%/18%.</span></p></div></div>
 
-                    <div class="screenshot-card" onclick="openLightbox(this)"><span class="screenshot-step-tag">STEP 03</span><div class="screenshot-img-wrapper"><img src="screenshot/Cap3.jpeg" alt="Impulse Design"></div><div class="screenshot-caption"><h5><span class="fr">⚙️ Design de l'Impulse</span><span class="en">⚙️ Impulse Design</span></h5><p><span class="fr">Time series (100Hz, fenêtre 1000ms) → Spectral Analysis (6 axes : accX/Y/Z + gyrX/Y/Z) → Classificateur (5 classes).</span><span class="en">Time series (100Hz, 1000ms window) → Spectral Analysis (6 axes: accX/Y/Z + gyrX/Y/Z) → Classifier (5 classes).</span></p></div></div>
+                    <div class="screenshot-card" onclick="openLightbox(this)"><span class="screenshot-step-tag">STEP 03</span><div class="screenshot-img-wrapper"><img src="Cap3.jpeg" alt="Impulse Design"></div><div class="screenshot-caption"><h5><span class="fr">⚙️ Design de l'Impulse</span><span class="en">⚙️ Impulse Design</span></h5><p><span class="fr">Time series (100Hz, fenêtre 1000ms) → Spectral Analysis (6 axes : accX/Y/Z + gyrX/Y/Z) → Classificateur (5 classes).</span><span class="en">Time series (100Hz, 1000ms window) → Spectral Analysis (6 axes: accX/Y/Z + gyrX/Y/Z) → Classifier (5 classes).</span></p></div></div>
 
-                    <div class="screenshot-card" onclick="openLightbox(this)"><span class="screenshot-step-tag">STEP 03</span><div class="screenshot-img-wrapper"><img src="screenshot/Cap4.jpeg" alt="Spectral Features"></div><div class="screenshot-caption"><h5><span class="fr">🔬 Features Spectrales</span><span class="en">🔬 Spectral Features</span></h5><p><span class="fr">900 fenêtres générées — le Feature Explorer montre des clusters bien séparés. Processing : 8ms, 3 KB RAM.</span><span class="en">900 windows generated — Feature Explorer shows well-separated clusters. Processing: 8ms, 3 KB RAM.</span></p></div></div>
+                    <div class="screenshot-card" onclick="openLightbox(this)"><span class="screenshot-step-tag">STEP 03</span><div class="screenshot-img-wrapper"><img src="Cap4.jpeg" alt="Spectral Features"></div><div class="screenshot-caption"><h5><span class="fr">🔬 Features Spectrales</span><span class="en">🔬 Spectral Features</span></h5><p><span class="fr">900 fenêtres générées — le Feature Explorer montre des clusters bien séparés. Processing : 8ms, 3 KB RAM.</span><span class="en">900 windows generated — Feature Explorer shows well-separated clusters. Processing: 8ms, 3 KB RAM.</span></p></div></div>
 
-                    <div class="screenshot-card" onclick="openLightbox(this)"><span class="screenshot-step-tag">STEP 04</span><div class="screenshot-img-wrapper"><img src="screenshot/Cap5.jpeg" alt="Training Results"></div><div class="screenshot-caption"><h5><span class="fr">🧠 Entraînement — 95.6%</span><span class="en">🧠 Training — 95.6%</span></h5><p><span class="fr">120 cycles, learning rate 0.0005, batch 32. Réseau : Input(126) → Dense(20) → Dense(10) → Output(5). Loss : 0.14.</span><span class="en">120 cycles, learning rate 0.0005, batch 32. Network: Input(126) → Dense(20) → Dense(10) → Output(5). Loss: 0.14.</span></p></div></div>
+                    <div class="screenshot-card" onclick="openLightbox(this)"><span class="screenshot-step-tag">STEP 04</span><div class="screenshot-img-wrapper"><img src="Cap5.jpeg" alt="Training Results"></div><div class="screenshot-caption"><h5><span class="fr">🧠 Entraînement — 95.6%</span><span class="en">🧠 Training — 95.6%</span></h5><p><span class="fr">120 cycles, learning rate 0.0005, batch 32. Réseau : Input(126) → Dense(20) → Dense(10) → Output(5). Loss : 0.14.</span><span class="en">120 cycles, learning rate 0.0005, batch 32. Network: Input(126) → Dense(20) → Dense(10) → Output(5). Loss: 0.14.</span></p></div></div>
 
-                    <div class="screenshot-card" onclick="openLightbox(this)"><span class="screenshot-step-tag">STEP 04</span><div class="screenshot-img-wrapper"><img src="screenshot/Cap6.jpeg" alt="Confusion Matrix"></div><div class="screenshot-caption"><h5><span class="fr">📈 Matrice de Confusion</span><span class="en">📈 Confusion Matrix</span></h5><p><span class="fr">Backward 94.6% | Forward 88.9% | Idle 100% | Left 97.0% | Right 97.3%. F1 : 0.92–0.99. ROC AUC : 1.00.</span><span class="en">Backward 94.6% | Forward 88.9% | Idle 100% | Left 97.0% | Right 97.3%. F1: 0.92–0.99. ROC AUC: 1.00.</span></p></div></div>
+                    <div class="screenshot-card" onclick="openLightbox(this)"><span class="screenshot-step-tag">STEP 04</span><div class="screenshot-img-wrapper"><img src="Cap6.jpeg" alt="Confusion Matrix"></div><div class="screenshot-caption"><h5><span class="fr">📈 Matrice de Confusion</span><span class="en">📈 Confusion Matrix</span></h5><p><span class="fr">Backward 94.6% | Forward 88.9% | Idle 100% | Left 97.0% | Right 97.3%. F1 : 0.92–0.99. ROC AUC : 1.00.</span><span class="en">Backward 94.6% | Forward 88.9% | Idle 100% | Left 97.0% | Right 97.3%. F1: 0.92–0.99. ROC AUC: 1.00.</span></p></div></div>
 
-                    <div class="screenshot-card" onclick="openLightbox(this)"><span class="screenshot-step-tag">STEP 05</span><div class="screenshot-img-wrapper"><img src="screenshot/Cap7.jpeg" alt="Deployment"></div><div class="screenshot-caption"><h5><span class="fr">📦 Configuration Déploiement</span><span class="en">📦 Deployment Config</span></h5><p><span class="fr">Arduino library + EON Compiler (53% RAM, 54% ROM en moins). Quantized int8 : latence 9ms, RAM 3.2K.</span><span class="en">Arduino library + EON Compiler (53% less RAM, 54% less ROM). Quantized int8: 9ms latency, 3.2K RAM.</span></p></div></div>
+                    <div class="screenshot-card" onclick="openLightbox(this)"><span class="screenshot-step-tag">STEP 05</span><div class="screenshot-img-wrapper"><img src="Cap7.jpeg" alt="Deployment"></div><div class="screenshot-caption"><h5><span class="fr">📦 Configuration Déploiement</span><span class="en">📦 Deployment Config</span></h5><p><span class="fr">Arduino library + EON Compiler (53% RAM, 54% ROM en moins). Quantized int8 : latence 9ms, RAM 3.2K.</span><span class="en">Arduino library + EON Compiler (53% less RAM, 54% less ROM). Quantized int8: 9ms latency, 3.2K RAM.</span></p></div></div>
 
-                    <div class="screenshot-card" onclick="openLightbox(this)"><span class="screenshot-step-tag">STEP 05</span><div class="screenshot-img-wrapper"><img src="screenshot/Cap8.jpeg" alt="Build Success"></div><div class="screenshot-caption"><h5><span class="fr">✅ Build Réussi !</span><span class="en">✅ Build Successful!</span></h5><p><span class="fr">"Built Arduino library" — prêt via Sketch → Include Library → Add .ZIP Library.</span><span class="en">"Built Arduino library" — ready via Sketch → Include Library → Add .ZIP Library.</span></p></div></div>
+                    <div class="screenshot-card" onclick="openLightbox(this)"><span class="screenshot-step-tag">STEP 05</span><div class="screenshot-img-wrapper"><img src="Cap8.jpeg" alt="Build Success"></div><div class="screenshot-caption"><h5><span class="fr">✅ Build Réussi !</span><span class="en">✅ Build Successful!</span></h5><p><span class="fr">"Built Arduino library" — prêt via Sketch → Include Library → Add .ZIP Library.</span><span class="en">"Built Arduino library" — ready via Sketch → Include Library → Add .ZIP Library.</span></p></div></div>
                 </div>
             </div>
 
@@ -334,7 +328,6 @@
         </div>
     </section><div class="section-sep"></div>
 
-    <!-- STORY -->
     <section class="section" id="story">
         <div class="section-container">
             <div class="section-header reveal"><div class="section-label"><span class="fr">Notre Aventure</span><span class="en">Our Adventure</span></div><h2 class="section-title"><span class="fr">Chronique d'une <span class="highlight">Nuit de Folie</span></span><span class="en">Chronicle of a <span class="highlight">Night of Madness</span></span></h2></div>
@@ -350,7 +343,6 @@
         </div>
     </section><div class="section-sep"></div>
 
-    <!-- SETUP -->
     <section class="section" id="setup">
         <div class="section-container">
             <div class="section-header reveal"><div class="section-label"><span class="fr">Installation</span><span class="en">Setup</span></div><h2 class="section-title"><span class="fr">Guide de <span class="highlight">Configuration</span></span><span class="en">Configuration <span class="highlight">Guide</span></span></h2></div>
@@ -358,200 +350,4 @@
                 <div class="setup-card reveal"><span class="step-num">01</span><h4><i class="fas fa-download"></i> Arduino IDE</h4><p><span class="fr">Arduino IDE 2.x</span><span class="en">Arduino IDE 2.x</span></p><ul><li><span class="fr">Board : <strong>Arduino Mbed OS Nano Boards</strong></span><span class="en">Board: <strong>Arduino Mbed OS Nano Boards</strong></span></li><li><span class="fr">Librairies : <strong>ArduinoBLE, Arduino_LSM9DS1</strong></span><span class="en">Libraries: <strong>ArduinoBLE, Arduino_LSM9DS1</strong></span></li></ul></div>
                 <div class="setup-card reveal reveal-delay-1"><span class="step-num">02</span><h4><i class="fas fa-terminal"></i> Edge Impulse CLI</h4><div class="cmd-block">npm install -g edge-impulse-cli</div><div class="cmd-block" style="margin-top:.4rem">edge-impulse-daemon</div></div>
                 <div class="setup-card reveal reveal-delay-2"><span class="step-num">03</span><h4><i class="fab fa-python"></i> Python & pynput</h4><div class="cmd-block">pip install pyserial pynput</div></div>
-                <div class="setup-card reveal reveal-delay-3"><span class="step-num">04</span><h4><i class="fas fa-gamepad"></i> Beach Buggy Racing</h4><p><span class="fr">Installer sur PC, configurer les flèches.</span><span class="en">Install on PC, configure arrow keys.</span></p></div>
-                <div class="setup-card reveal reveal-delay-4"><span class="step-num">05</span><h4><i class="fas fa-plug"></i> <span class="fr">Matériels</span><span class="en">Hardware</span></h4><ul><li>Arduino Nano 33 BLE Sense (+ USB)</li><li>Powerbank</li><li><span class="fr">PC avec le jeu</span><span class="en">PC with the game</span></li></ul></div>
-            </div>
-        </div>
-    </section><div class="section-sep"></div>
-
-    <!-- CODE -->
-    <section class="section" id="code">
-        <div class="section-container">
-            <div class="section-header reveal"><div class="section-label"><span class="fr">Code Source</span><span class="en">Source Code</span></div><h2 class="section-title"><span class="fr">Les Deux <span class="highlight">Piliers du Code</span></span><span class="en">The Two <span class="highlight">Code Pillars</span></span></h2></div>
-            <div class="reveal">
-                <div class="code-tabs">
-                    <button class="code-tab active" onclick="showCodePanel('arduino',this)"><i class="fas fa-microchip"></i>&nbsp; nano33_gesture.ino</button>
-                    <button class="code-tab" onclick="showCodePanel('python',this)"><i class="fab fa-python"></i>&nbsp; gesture_to_keys.py</button>
-                </div>
-                <div class="code-panel active" id="panel-arduino">
-                    <div class="code-panel-header"><div class="code-panel-dots"><span></span><span></span><span></span></div><span class="code-panel-filename">nano33_gesture.ino</span><button class="code-copy-btn" onclick="copyCode('arduino-code')"><i class="fas fa-copy"></i> Copy</button></div>
-                    <pre id="arduino-code"><span class="cm">/* GESTURE HERO — Arduino Nano 33 BLE Sense
- * IA embarquée (Edge Impulse) + Serial USB */</span>
-
-<span class="inc">#include</span> <span class="str">&lt;Arduino_LSM9DS1.h&gt;</span>
-<span class="inc">#include</span> <span class="str">&lt;Mr_Sun-project-1_inferencing.h&gt;</span>
-
-<span class="kw">#define</span> <span class="var">NUM_SAMPLES</span>       <span class="num">119</span>
-<span class="kw">#define</span> <span class="var">NUM_AXES</span>          <span class="num">6</span>
-<span class="kw">#define</span> <span class="var">CONFIDENCE_THRESH</span> <span class="num">0.70</span>
-
-<span class="kw">float</span> features[NUM_SAMPLES * NUM_AXES];
-<span class="kw">int</span> sampleIndex = <span class="num">0</span>;
-<span class="type">String</span> lastGesture = <span class="str">""</span>;
-
-<span class="kw">void</span> <span class="fn">setup</span>() {
-    Serial.<span class="fn">begin</span>(<span class="num">115200</span>);
-    <span class="kw">while</span> (!Serial);
-    <span class="kw">if</span> (!IMU.<span class="fn">begin</span>()) { Serial.<span class="fn">println</span>(<span class="str">"IMU ERROR"</span>); <span class="kw">while</span>(<span class="num">1</span>); }
-    Serial.<span class="fn">println</span>(<span class="str">"Gesture Hero Ready"</span>);
-}
-
-<span class="kw">void</span> <span class="fn">loop</span>() {
-    sampleIndex = <span class="num">0</span>;
-    <span class="kw">while</span> (sampleIndex &lt; NUM_SAMPLES) {
-        <span class="kw">float</span> ax, ay, az, gx, gy, gz;
-        <span class="kw">if</span> (IMU.<span class="fn">accelerationAvailable</span>() &amp;&amp; IMU.<span class="fn">gyroscopeAvailable</span>()) {
-            IMU.<span class="fn">readAcceleration</span>(ax, ay, az);
-            IMU.<span class="fn">readGyroscope</span>(gx, gy, gz);
-            features[sampleIndex * NUM_AXES + <span class="num">0</span>] = ax;
-            features[sampleIndex * NUM_AXES + <span class="num">1</span>] = ay;
-            features[sampleIndex * NUM_AXES + <span class="num">2</span>] = az;
-            features[sampleIndex * NUM_AXES + <span class="num">3</span>] = gx;
-            features[sampleIndex * NUM_AXES + <span class="num">4</span>] = gy;
-            features[sampleIndex * NUM_AXES + <span class="num">5</span>] = gz;
-            sampleIndex++;
-        }
-    }
-    <span class="type">signal_t</span> signal;
-    signal.total_length = NUM_SAMPLES * NUM_AXES;
-    signal.get_data = &amp;<span class="fn">raw_feature_get_data</span>;
-    <span class="type">ei_impulse_result_t</span> result;
-    <span class="kw">if</span> (<span class="fn">run_classifier</span>(&amp;signal, &amp;result, <span class="kw">false</span>) == EI_IMPULSE_OK) {
-        <span class="kw">int</span> maxIdx = <span class="num">0</span>; <span class="kw">float</span> maxVal = <span class="num">0</span>;
-        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; EI_CLASSIFIER_LABEL_COUNT; i++) {
-            <span class="kw">if</span> (result.classification[i].value &gt; maxVal) {
-                maxVal = result.classification[i].value; maxIdx = i;
-            }
-        }
-        <span class="kw">if</span> (maxVal &gt;= CONFIDENCE_THRESH) {
-            <span class="type">String</span> g = result.classification[maxIdx].label;
-            <span class="kw">if</span> (g != <span class="str">"idle"</span> &amp;&amp; g != lastGesture) {
-                Serial.<span class="fn">println</span>(g);
-                lastGesture = g;
-            } <span class="kw">else if</span> (g == <span class="str">"idle"</span>) { lastGesture = <span class="str">""</span>; }
-        }
-    }
-    <span class="fn">delay</span>(<span class="num">80</span>);
-}
-
-<span class="kw">int</span> <span class="fn">raw_feature_get_data</span>(<span class="kw">size_t</span> offset, <span class="kw">size_t</span> len, <span class="kw">float</span> *out) {
-    <span class="fn">memcpy</span>(out, features + offset, len * <span class="kw">sizeof</span>(<span class="kw">float</span>));
-    <span class="kw">return</span> <span class="num">0</span>;
-}</pre>
-                </div>
-                <div class="code-panel" id="panel-python">
-                    <div class="code-panel-header"><div class="code-panel-dots"><span></span><span></span><span></span></div><span class="code-panel-filename">gesture_to_keys.py</span><button class="code-copy-btn" onclick="copyCode('python-code')"><i class="fas fa-copy"></i> Copy</button></div>
-                    <pre id="python-code"><span class="cm">"""GESTURE HERO — Python Keyboard Simulator"""</span>
-
-<span class="kw">import</span> serial, time, sys
-<span class="kw">from</span> pynput.keyboard <span class="kw">import</span> Key, Controller
-
-<span class="var">SERIAL_PORT</span> = <span class="str">"COM3"</span>    <span class="cm"># or /dev/ttyACM0</span>
-<span class="var">BAUD_RATE</span>   = <span class="num">115200</span>
-<span class="var">PRESS_DUR</span>  = <span class="num">0.15</span>
-
-<span class="var">GESTURE_MAP</span> = {
-    <span class="str">"forward"</span>:  Key.up,
-    <span class="str">"backward"</span>: Key.down,
-    <span class="str">"left"</span>:     Key.left,
-    <span class="str">"right"</span>:    Key.right,
-}
-
-<span class="kw">def</span> <span class="fn">main</span>():
-    kb = Controller()
-    <span class="kw">print</span>(<span class="str">"=== Gesture Hero — Arduino Days 2026 ==="</span>)
-    <span class="kw">print</span>(<span class="str">"Commandes :"</span>)
-    <span class="kw">for</span> g, k <span class="kw">in</span> GESTURE_MAP.items():
-        <span class="kw">print</span>(<span class="str">f"  {g} → {k}"</span>)
-    <span class="kw">try</span>:
-        ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=<span class="num">1</span>)
-        time.sleep(<span class="num">2</span>)
-        <span class="kw">print</span>(<span class="str">"Connecté ! En attente de gestes..."</span>)
-        <span class="kw">while True</span>:
-            <span class="kw">if</span> ser.in_waiting &gt; <span class="num">0</span>:
-                g = ser.readline().decode(<span class="str">"utf-8"</span>).strip().lower()
-                <span class="kw">if</span> g <span class="kw">in</span> GESTURE_MAP:
-                    kb.press(GESTURE_MAP[g])
-                    time.sleep(PRESS_DUR)
-                    kb.release(GESTURE_MAP[g])
-                    <span class="kw">print</span>(<span class="str">f"  → {g.upper()}"</span>)
-    <span class="kw">except</span> KeyboardInterrupt:
-        <span class="kw">print</span>(<span class="str">"\nStopped."</span>)
-    <span class="kw">finally</span>:
-        <span class="kw">if</span> <span class="str">'ser'</span> <span class="kw">in</span> <span class="fn">locals</span>(): ser.close()
-
-<span class="kw">if</span> __name__ == <span class="str">"__main__"</span>: <span class="fn">main</span>()</pre>
-                </div>
-            </div>
-        </div>
-    </section><div class="section-sep"></div>
-
-    <!-- CHALLENGES -->
-    <section class="section" id="challenges">
-        <div class="section-container">
-            <div class="section-header reveal"><div class="section-label"><span class="fr">Défis & Solutions</span><span class="en">Challenges & Solutions</span></div><h2 class="section-title"><span class="fr">Les Obstacles <span class="highlight">Surmontés</span></span><span class="en">Obstacles <span class="highlight">Overcome</span></span></h2></div>
-            <div class="challenges-grid">
-                <div class="challenge-card reveal"><div class="challenge-icon">📊</div><h4><span class="fr">Collecte de données (×4)</span><span class="en">Data Collection (×4)</span></h4><p><span class="fr">Reprise 4+ fois. Chaque geste nécessitait une exécution précise et reproductible.</span><span class="en">Redone 4+ times. Each gesture required precise, reproducible execution.</span></p><span class="challenge-tag tag-resolved"><span class="fr">✓ Résolu</span><span class="en">✓ Resolved</span></span></div>
-                <div class="challenge-card reveal reveal-delay-1"><div class="challenge-icon">🔌</div><h4><span class="fr">Connexion CLI + BLE</span><span class="en">CLI + BLE Connection</span></h4><p><span class="fr">Edge Impulse CLI instable sous Windows. Connexion BLE avec TimeoutError et UUID mismatch.</span><span class="en">Edge Impulse CLI unstable on Windows. BLE connection with TimeoutError and UUID mismatch.</span></p><span class="challenge-tag tag-resolved"><span class="fr">✓ Pivot Ubuntu</span><span class="en">✓ Ubuntu Pivot</span></span></div>
-                <div class="challenge-card reveal reveal-delay-2"><div class="challenge-icon">🐧</div><h4><span class="fr">Windows → Ubuntu</span><span class="en">Windows → Ubuntu</span></h4><p><span class="fr">Ubuntu stabilise le CLI mais Beach Buggy Racing n'existe pas sur Linux.</span><span class="en">Ubuntu stabilizes CLI but Beach Buggy Racing doesn't exist on Linux.</span></p><span class="challenge-tag tag-workaround"><span class="fr">⟳ Dual workflow</span><span class="en">⟳ Dual workflow</span></span></div>
-                <div class="challenge-card reveal reveal-delay-3"><div class="challenge-icon">🎮</div><h4><span class="fr">Installation du jeu</span><span class="en">Game Installation</span></h4><p><span class="fr">5+ échecs d'émulateurs. Steam payant. Retour Windows forcé.</span><span class="en">5+ emulator failures. Steam paid. Forced Windows return.</span></p><span class="challenge-tag tag-resolved"><span class="fr">✓ Install directe</span><span class="en">✓ Direct install</span></span></div>
-                <div class="challenge-card reveal reveal-delay-4"><div class="challenge-icon">⏱️</div><h4><span class="fr">Temps (&lt;24h)</span><span class="en">Time (&lt;24h)</span></h4><p><span class="fr">Tout en moins de 24h : collecte, entraînement, code, tests, démo.</span><span class="en">Everything in under 24h: collection, training, code, testing, demo.</span></p><span class="challenge-tag tag-resolved"><span class="fr">✓ Mission accomplie</span><span class="en">✓ Mission accomplished</span></span></div>
-                <div class="challenge-card reveal reveal-delay-4"><div class="challenge-icon">🧠</div><h4><span class="fr">Précision du modèle</span><span class="en">Model Accuracy</span></h4><p><span class="fr">Forward à 88.9% — geste le plus difficile à distinguer de backward. Résolu par plus de données.</span><span class="en">Forward at 88.9% — hardest gesture to distinguish from backward. Fixed with more data.</span></p><span class="challenge-tag tag-workaround"><span class="fr">⟳ 95.6% final</span><span class="en">⟳ 95.6% final</span></span></div>
-            </div>
-        </div>
-    </section><div class="section-sep"></div>
-
-    <!-- RESOURCES -->
-    <section class="section" id="resources">
-        <div class="section-container">
-            <div class="section-header reveal"><div class="section-label"><span class="fr">Ressources</span><span class="en">Resources</span></div><h2 class="section-title"><span class="fr">Liens <span class="highlight">Utiles</span></span><span class="en">Useful <span class="highlight">Links</span></span></h2></div>
-            <div class="resources-grid reveal">
-                <a href="https://docs.arduino.cc/hardware/nano-33-ble-sense/" target="_blank" class="resource-link"><i class="fas fa-microchip"></i><div class="res-text"><span class="res-title">Arduino Nano 33 BLE Sense</span><span class="res-desc"><span class="fr">Documentation officielle</span><span class="en">Official Documentation</span></span></div></a>
-                <a href="https://studio.edgeimpulse.com/" target="_blank" class="resource-link"><i class="fas fa-brain"></i><div class="res-text"><span class="res-title">Edge Impulse Studio</span><span class="res-desc"><span class="fr">Plateforme IA</span><span class="en">AI Platform</span></span></div></a>
-                <a href="https://docs.edgeimpulse.com/docs/development-platforms/officially-supported-mcu-targets/arduino-nano-33-ble-sense" target="_blank" class="resource-link"><i class="fas fa-plug"></i><div class="res-text"><span class="res-title">Edge Impulse × Arduino</span><span class="res-desc"><span class="fr">Connexion</span><span class="en">Connection</span></span></div></a>
-                <a href="https://projecthub.arduino.cc/" target="_blank" class="resource-link"><i class="fas fa-project-diagram"></i><div class="res-text"><span class="res-title">Arduino Project Hub</span><span class="res-desc"><span class="fr">Communauté</span><span class="en">Community</span></span></div></a>
-                <a href="https://pynput.readthedocs.io/" target="_blank" class="resource-link"><i class="fab fa-python"></i><div class="res-text"><span class="res-title">pynput</span><span class="res-desc"><span class="fr">Simulation clavier</span><span class="en">Keyboard simulation</span></span></div></a>
-            </div>
-        </div>
-    </section><div class="section-sep"></div>
-
-    <!-- TEAM -->
-    <section class="section" id="team" style="text-align:center">
-        <div class="section-container">
-            <div class="section-header reveal"><div class="section-label"><span class="fr">L'Équipe</span><span class="en">The Team</span></div><h2 class="section-title"><span class="fr">Les <span class="highlight">Gesture Heroes</span></span><span class="en">The <span class="highlight">Gesture Heroes</span></span></h2></div>
-            <div class="team-avatars reveal">
-                <div class="team-avatar"><div class="avatar-circle">🦸</div><span class="name">Gesture Hero</span><span class="role"><span class="fr">Développeur IA</span><span class="en">AI Developer</span></span></div>
-                <div class="team-avatar"><div class="avatar-circle">🧙</div><span class="name">Motion Master</span><span class="role"><span class="fr">Ingénieur Embarqué</span><span class="en">Embedded Engineer</span></span></div>
-                <div class="team-avatar"><div class="avatar-circle">⚡</div><span class="name">Signal Ninja</span><span class="role"><span class="fr">Développeur Python</span><span class="en">Python Developer</span></span></div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-logo">GESTURE HERO</div>
-        <p>Arduino Days 2026 — Cotonou Hackathon</p>
-        <div class="footer-links"><a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a><a href="https://projecthub.arduino.cc/" target="_blank"><i class="fas fa-microchip"></i></a><a href="https://studio.edgeimpulse.com/" target="_blank"><i class="fas fa-brain"></i></a></div>
-        <p style="margin-top:1.5rem;font-size:.75rem;color:var(--text-muted)">© 2026 Gesture Hero — Rise of the Motion Masters</p>
-    </footer>
-
-    <script>
-        window.addEventListener('load',()=>{setTimeout(()=>{document.getElementById('loader').classList.add('hidden')},800)});
-        function switchLang(l){document.documentElement.setAttribute('data-lang',l);document.querySelectorAll('.lang-btn').forEach(b=>{b.classList.toggle('active',b.getAttribute('data-lang-btn')===l)})}
-        window.addEventListener('scroll',()=>{const y=window.scrollY;document.getElementById('navbar').classList.toggle('scrolled',y>50);document.getElementById('backToTop').classList.toggle('visible',y>500)});
-        const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
-        function showCodePanel(n,b){document.querySelectorAll('.code-panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.code-tab').forEach(t=>t.classList.remove('active'));document.getElementById('panel-'+n).classList.add('active');b.classList.add('active')}
-        function copyCode(id){const t=document.getElementById(id).textContent;navigator.clipboard.writeText(t).then(()=>{const b=document.getElementById(id).closest('.code-panel').querySelector('.code-copy-btn');const o=b.innerHTML;b.innerHTML='<i class="fas fa-check"></i> Copied!';b.style.color='#28c840';setTimeout(()=>{b.innerHTML=o;b.style.color=''},2000)})}
-        function openLightbox(c){const i=c.querySelector('img');if(!i)return;document.getElementById('lightbox-img').src=i.src;document.getElementById('lightbox').classList.add('active')}
-        function closeLightbox(){document.getElementById('lightbox').classList.remove('active')}
-        document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
-        document.querySelectorAll('.nav-links a').forEach(l=>{l.addEventListener('click',()=>{document.getElementById('navLinks').classList.remove('open')})});
-        document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
-        const canvas=document.getElementById('bg-canvas'),ctx=canvas.getContext('2d');let particles=[];
-        function resizeCanvas(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}
-        class Particle{constructor(){this.reset()}reset(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.vx=(Math.random()-.5)*.3;this.vy=(Math.random()-.5)*.3;this.r=Math.random()*1.5+.5;this.o=Math.random()*.3+.1}update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>canvas.width)this.vx*=-1;if(this.y<0||this.y>canvas.height)this.vy*=-1}draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=`rgba(0,180,166,${this.o})`;ctx.fill()}}
-        function initP(){particles=[];const c=Math.min(Math.floor(window.innerWidth*.06),80);for(let i=0;i<c;i++)particles.push(new Particle())}
-        function animate(){ctx.clearRect(0,0,canvas.width,canvas.height);particles.forEach(p=>{p.update();p.draw()});for(let i=0;i<particles.length;i++)for(let j=i+1;j<particles.length;j++){const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<150){ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.strokeStyle=`rgba(0,180,166,${.06*(1-d/150)})`;ctx.lineWidth=.5;ctx.stroke()}}requestAnimationFrame(animate)}
-        window.addEventListener('resize',()=>{resizeCanvas();initP()});resizeCanvas();initP();animate();
-    </script>
-</body>
-</html>
+                <div class="setup-card reveal reveal-delay-3"><span class="step
