@@ -7,7 +7,7 @@ sur Arduino Nano 33 BLE Sense.
 
 ## 🚀 Voir la documentation
 
-👉 [**Ouvrir le site**](https://Sun2301.github.io/Sun/)
+👉 [**Ouvrir le site**](https://Sun2301.github.io/Sun/hackaton.html)
 
 ## 🛠️ Technologies
 
