@@ -12,11 +12,11 @@
 
 
 // ===== BLE Setup =====
-BLEService gestureService("180C");
-BLEStringCharacteristic gestureCharacteristic("2A56", BLERead | BLENotify, 20);
+BLEService gestureService("19B10000-E8F2-537E-4F6C-D104768A1214");
+BLEStringCharacteristic gestureCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLENotify, 20);
 
 // ===== Paramètres =====
-#define CONFIDENCE_THRESHOLD  0.7   // Seuil de confiance minimum pour envoyer un geste
+#define CONFIDENCE_THRESHOLD  0.75   // Seuil de confiance minimum pour envoyer un geste
 #define SAMPLE_COUNT          EI_CLASSIFIER_RAW_SAMPLE_COUNT
 #define FEATURE_SIZE          EI_CLASSIFIER_DSP_INPUT_FRAME_SIZE
 
@@ -43,7 +43,8 @@ void setup() {
         while (1);
     }
 
-    BLE.setLocalName("GestureHero");
+    BLE.setLocalName("Sunnypulse");
+    
     BLE.setAdvertisedService(gestureService);
     gestureService.addCharacteristic(gestureCharacteristic);
     BLE.addService(gestureService);
@@ -63,23 +64,19 @@ void loop() {
             // Collecter les données IMU
             int idx = 0;
             for (int i = 0; i < SAMPLE_COUNT; i++) {
-                float ax, ay, az, gx, gy, gz;
-
-                // Attendre une nouvelle mesure
-                while (!IMU.accelerationAvailable() || !IMU.gyroscopeAvailable());
-
-                IMU.readAcceleration(ax, ay, az);
-                IMU.readGyroscope(gx, gy, gz);
-
-                features[idx++] = ax;
-                features[idx++] = ay;
-                features[idx++] = az;
-                features[idx++] = gx;
-                features[idx++] = gy;
-                features[idx++] = gz;
-
-                delayMicroseconds(1000000 / EI_CLASSIFIER_FREQUENCY);
-            }
+    BLE.poll();  // ← ajouter cette ligne ici
+    float ax, ay, az, gx, gy, gz;
+    while (!IMU.accelerationAvailable() || !IMU.gyroscopeAvailable());
+    IMU.readAcceleration(ax, ay, az);
+    IMU.readGyroscope(gx, gy, gz);
+    features[idx++] = ax;
+    features[idx++] = ay;
+    features[idx++] = az;
+    features[idx++] = gx;
+    features[idx++] = gy;
+    features[idx++] = gz;
+    delayMicroseconds(1000000 / 100);
+}
 
             // Créer le signal pour Edge Impulse
             signal_t signal;

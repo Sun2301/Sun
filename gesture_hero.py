@@ -16,8 +16,8 @@ from pynput.keyboard import Key, Controller
 import time
 
 # ===== Configuration =====
-DEVICE_NAME = "GestureHero"
-CHARACTERISTIC_UUID = "00002a56-0000-1000-8000-00805f9b34fb"
+DEVICE_NAME = "Sunnypulse"
+CHARACTERISTIC_UUID = "19b10001-e8f2-537e-4f6c-d104768a1214"
 KEY_PRESS_DURATION = 0.15  # Durée d'appui de touche en secondes
 
 # ===== Mapping gestes → touches =====
@@ -69,9 +69,15 @@ async def connect_and_run():
             print("Dispositif non trouvé, nouvelle tentative...")
 
     print(f"Trouvé : {device.name} ({device.address})")
+    await asyncio.sleep(2.0)  # Laisser Windows résoudre les services BLE
 
     # Connexion et écoute
-    async with BleakClient(device.address) as client:
+    
+    async with BleakClient(
+    device.address, 
+    timeout=30.0,
+    winrt={"use_cached_services": False}
+) as client:
         print("Connecté ! En attente de gestes...")
 
         await client.start_notify(CHARACTERISTIC_UUID, notification_handler)
